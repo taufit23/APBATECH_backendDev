@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "eb69dfbc-f0ac-4173-90e5-d0d3cc522848",
+		"name": "test coding APBATECH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14705177"
+	},
+	"item": [
+		{
+			"name": "antri soal",
+			"item": [
+				{
+					"name": "Status Antrean",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/antrean/status/1/2023-04-02",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"antrean",
+								"status",
+								"1",
+								"2023-04-02"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post antrean",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nomorkartu",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "nomorantrean",
+									"value": "A4",
+									"type": "text"
+								},
+								{
+									"key": "norm",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "namapoli",
+									"value": "Poli Kandungan",
+									"type": "text"
+								},
+								{
+									"key": "kodepoli",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "tglpriksa",
+									"value": "2021-02-19",
+									"type": "text"
+								},
+								{
+									"key": "nik",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "keluhan",
+									"value": "Sakit GIGI",
+									"type": "text"
+								},
+								{
+									"key": "statusdipanggil",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "angkaantrean",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/antrean",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"antrean"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sisa antrian",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/antrean/sisapeserta/1/1/2023-04-02",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"antrean",
+								"sisapeserta",
+								"1",
+								"1",
+								"2023-04-02"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "batal antrian",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/antrean/batal/697",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"antrean",
+								"batal",
+								"697"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "1|7MUUenKVUbx4LogZlIBXQtdIyHWoqEeubtAufyBs",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "taufit23",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Tauf1t23",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
